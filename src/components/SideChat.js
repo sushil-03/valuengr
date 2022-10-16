@@ -96,7 +96,7 @@ const SideChat = () => {
                                         </span>
                                     </div>
                                     <span className="text-sm text-gray-500 text-ellipsis ">
-                                        Lorem ipsum dolor ...
+                                        Lorem ipsum dolor dfsdf ...
                                     </span>
                                 </div>
                             </div>
