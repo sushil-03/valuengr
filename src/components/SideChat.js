@@ -109,7 +109,7 @@ const SideChat = () => {
                     </span>
                     <span className="text-sm">All Chats</span>
                 </span>
-                <div className="mx-4 flex flex-col overflow-y-scroll h-52 tracking-tighter flex-1">
+                <div className="mx-4 flex flex-col overflow-y-scroll h-64 tracking-tighter flex-1">
                     {peoples.map((people, key) => {
                         return (
                             <div
