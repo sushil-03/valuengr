@@ -87,27 +87,29 @@ const Chat = () => {
                     </div>
                 </div>
             </div>
-            <div className="screen text-white text-sm  tracking-tighter leading-4 h-[75%] flex  flex-col align-bottom flex-1 p-2 grow overflow-y-scroll mt-2 gap-3 absolute bottom-10 w-full">
-                {message.map((mess, key) => {
-                    if (mess.author === "me") {
+            <div className="absolute bottom-10 w-full max-h-[75%] overflow-scroll">
+                <div className="screen text-white text-sm  tracking-tighter leading-4  flex  flex-col align-bottom flex-1 p-2 grow overflow-y-scroll mt-2 gap-3 ">
+                    {message.map((mess, key) => {
+                        if (mess.author === "me") {
+                            return (
+                                <div
+                                    className="bg-[#191919] p-3 rounded-tl-xl rounded-tr-xl  rounded-bl-xl my-1 mr-3 ml-auto text-right"
+                                    key={key}
+                                >
+                                    <span>{mess.message}</span>
+                                </div>
+                            );
+                        }
                         return (
                             <div
-                                className="bg-[#191919] p-3 rounded-tl-xl rounded-tr-xl  rounded-bl-xl my-1 mr-3 ml-auto text-right"
+                                className="max-w-[16rem] bg-[#b881e1] p-3 rounded-tl-xl rounded-tr-xl  rounded-br-xl ml-2"
                                 key={key}
                             >
                                 <span>{mess.message}</span>
                             </div>
                         );
-                    }
-                    return (
-                        <div
-                            className="max-w-[16rem] bg-[#b881e1] p-3 rounded-tl-xl rounded-tr-xl  rounded-br-xl ml-2"
-                            key={key}
-                        >
-                            <span>{mess.message}</span>
-                        </div>
-                    );
-                })}
+                    })}
+                </div>
             </div>
 
             <div className="align-bottom  absolute -bottom-4  ">
