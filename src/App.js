@@ -4,11 +4,12 @@ import SideChat from "./components/SideChat";
 
 function App() {
     return (
-        <div className="App bg-[#0F0F0F] w-screen h-screen relative flex">
-            <div className="w-[280px] bg-[#141414] z-50 h-[95%] max-w-[98%]  absolute top-5 left-10  rounded-[20px]">
+        <div className="App bg-black w-screen h-screen p-5 flex overflow-hidden">
+            <div className="w-1/5 h-full relative">
+                <div className="absolute w-3/4 h-full right-0 top-0 bg-white/5 z-0"></div>
                 <SideChat />
             </div>
-            <div className="w-[380px] bg-[#0D0D0D] z-10 h-[95%]  max-w-[98%] absolute top-5 left-[310px] rounded-tr-[20px] rounded-br-[20px]  ">
+            <div className="w-1/4 p-4 bg-white/5 z-10 h-full rounded-r-3xl ">
                 <Chat />
             </div>
         </div>

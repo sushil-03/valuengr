@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { IoPersonAdd, IoCallSharp } from "react-icons/io5";
 import { HiDotsVertical } from "react-icons/hi";
 import { AiOutlinePaperClip } from "react-icons/ai";
@@ -8,24 +8,32 @@ const Chat = () => {
     const [myMessage, setMyMessage] = useState("");
     const [message, setMessage] = useState([
         {
-            author: "me",
-            message: "Message by me ",
-        },
-        {
             author: "frnd",
-            message: "Lorem ipsum dolor sit,",
+            message:
+                "Lorem ipsum dolor sit amet, consectet adipiscing elit ut aliquam. ",
         },
         {
             author: "me",
-            message: "lorem epsum do for sdf",
+            message:
+                "Lorem ipsum dolor sit amet, conse ctet adipiscing elit ut aliquam. ",
         },
+
         {
-            author: "frnd",
+            author: "me",
             message: "Ok Work done",
         },
+        {
+            author: "frnd",
+            message:
+                "Lorem ipsum dolor sit amet, consectet adipiscing elit ut aliquam. ",
+        },
     ]);
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView();
     const sendMessage = (e) => {
         e.preventDefault();
+        if (myMessage === "") return;
+        executeScroll();
         setMessage([
             ...message,
             {
@@ -34,12 +42,12 @@ const Chat = () => {
             },
         ]);
         setMyMessage("");
-        console.log(message);
     };
+
     return (
-        <div className="font-poppins h-[95%] relative px-2 flex flex-col mt-1  ">
-            <div className="minHeading pt-5 pb-3 px-2 flex items-center font-poppins tracking-tighter  relative ">
-                <div className="flex gap-2 items-center">
+        <div className="font-poppins h-full relative  flex flex-col   ">
+            <div className="minHeading  flex items-center font-poppins  relative ">
+                <div className="flex gap-3 items-center">
                     <p>
                         <img
                             src="./logo.png"
@@ -47,8 +55,8 @@ const Chat = () => {
                             className="w-8 h-8 select-none"
                         />
                     </p>
-                    <span className="text-white  font-bold text-lg cursor-pointer ">
-                        Valuenger
+                    <span className="text-white  font-bold text-base cursor-pointer ">
+                        Valuengr
                     </span>
                 </div>
                 <div className="flex gap-5 items-center absolute right-2">
@@ -60,18 +68,18 @@ const Chat = () => {
                     </span>
                 </div>
             </div>
-            <div className="flex gap-2 items-center px-2 rounded-xl flex-initial ">
+            <div className="flex gap-4 items-center px-2 rounded-xl flex-initial mt-4">
                 <div className=" rounded-full">
                     <img
-                        src="./me.jpg"
+                        src="./me.png"
                         alt="profile"
-                        className="w-12 h-12 rounded-full object-fit"
+                        className="w-10 h-10 rounded-full object-fit"
                     />
                 </div>
                 <div className="flex justify-between items-center flex-1">
                     <div className="flex flex-col ">
-                        <span className="text-white text-[16px] font-semibold">
-                            Sushil Rawat
+                        <span className="text-white text-base font-medium">
+                            Peter White
                         </span>
                         <span className="text-gray-500 text-[12px]">
                             last seen recently
@@ -87,32 +95,80 @@ const Chat = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-10 w-full max-h-[75%] overflow-scroll">
-                <div className="screen text-white text-sm  tracking-tighter leading-4  flex  flex-col align-bottom flex-1 p-2 grow overflow-y-scroll mt-2 gap-3 ">
-                    {message.map((mess, key) => {
-                        if (mess.author === "me") {
+
+            <div className="  flex-1 justify-end mt-4 overflow-y-scroll">
+                <div className="  h-full flex  flex-col  gap-3 justify-end flex-1 overflow-y-scroll	barLeft  text-white text-sm   leading-4 min-h-0 flex-grow">
+                    <div className="overflow-y-scroll relative barLeft">
+                        {/* Music UI */}
+                        <div className="max-w-[14rem] bg-[#b881e1] mt-2 p-2 rounded-tl-xl rounded-tr-xl  rounded-br-xl  mb-1 min-h-0">
+                            <div className="flex gap-1 items-center p-2 ">
+                                <div className="w-[2px] h-3 bg-white ">
+                                    {""}
+                                </div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-1 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px]  h-5 bg-white"></div>
+                                <div className="w-[2px]  h-5 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-1 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white "></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-1 bg-white"></div>
+                                <div className="w-[2px] h-2 bg-white"></div>
+                                <div className="w-[2px] h-5 bg-white"></div>
+                                <div className="w-[2px] h-3 bg-white"></div>
+                            </div>
+                        </div>
+                        {message.map((mess, key) => {
+                            if (mess.author === "me") {
+                                return (
+                                    <div
+                                        className="w-[14rem] max-w-fit mt-2  mr-2 bg-[#191919] p-3 text-right rounded-tl-xl rounded-tr-xl  rounded-bl-xl   ml-auto   "
+                                        key={key}
+                                    >
+                                        <span className="">{mess.message}</span>
+                                    </div>
+                                );
+                            }
                             return (
                                 <div
-                                    className="bg-[#191919] p-3 rounded-tl-xl rounded-tr-xl  rounded-bl-xl my-1 mr-3 ml-auto text-right"
+                                    className=" w-[14rem] max-w-fit mt-2 bg-[#b881e1] p-3 rounded-tl-xl rounded-tr-xl  rounded-br-xl  mb-1"
                                     key={key}
                                 >
                                     <span>{mess.message}</span>
                                 </div>
                             );
-                        }
-                        return (
-                            <div
-                                className="max-w-[16rem] bg-[#b881e1] p-3 rounded-tl-xl rounded-tr-xl  rounded-br-xl ml-2"
-                                key={key}
-                            >
-                                <span>{mess.message}</span>
-                            </div>
-                        );
-                    })}
+                        })}
+                        <div
+                            ref={myRef}
+                            className=" absolute bottom-0  border-white/5"
+                        >
+                            {" "}
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div className="align-bottom  absolute -bottom-4  ">
+            <div className="align-bottom  relative">
                 <div className="searchbar  relative  text-gray-500">
                     <form action="" onSubmit={(e) => sendMessage(e)}>
                         <input
@@ -120,13 +176,13 @@ const Chat = () => {
                             onChange={(e) => setMyMessage(e.target.value)}
                             type="text"
                             placeholder="Type something..."
-                            className="w-[300px]  outline-none mt-1 py-2 pl-12 pr-4 text-gray-500 bg-transparent  text-sm"
+                            className="w-full pl-8  outline-none mt-1 py-2 pr-14 text-gray-500 bg-transparent  text-sm"
                             onSubmit={() => sendMessage()}
                         />
                     </form>
-                    <AiOutlinePaperClip className="absolute text-gray-500 left-4 top-[12px] text-xl" />
+                    <AiOutlinePaperClip className="absolute text-white/40 left-2 top-3 text-xl" />
                 </div>
-                <div className="p-2  bg-[#252525] absolute  -right-14 top-[5px] rounded-full">
+                <div className="p-2  bg-[#252525] absolute  right-3 top-[5px] rounded-full">
                     <BsLightningChargeFill
                         fill={"yellow"}
                         className=" text-xl  "

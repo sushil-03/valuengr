@@ -5,26 +5,90 @@ import { FaTelegramPlane } from "react-icons/fa";
 const SideChat = () => {
     const peoples = [
         {
-            name: "Sushil Rawat",
+            name: "Peter Smith",
             time: "12:20",
         },
         {
-            name: "Sushil Rawat",
+            name: "Peter Smith",
             time: "12:20",
         },
         {
-            name: "Sushil Rawat",
+            name: "Peter Smith",
             time: "12:20",
         },
         {
-            name: "Sushil Rawat",
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
+            time: "12:20",
+        },
+        {
+            name: "Peter Smith",
             time: "12:20",
         },
     ];
     return (
-        <div className="font-poppins  ">
+        <div className="font-poppins h-full w-full z-10 absolute bg-[#111] rounded-3xl barLeft">
             <div className="chat ">
-                <div className="minHeading pt-5 pb-4 px-2 flex justify-around items-center font-poppins tracking-tighter ">
+                <div className="minHeading pt-5 pb-4 px-2 flex justify-around items-center font-poppins  ">
                     <span className="text-white  font-bold text-xl cursor-pointer ">
                         Chats
                     </span>
@@ -41,33 +105,30 @@ const SideChat = () => {
                     <input
                         type="text"
                         placeholder="Search User"
-                        className=" w-5/6 mx-4 outline-none border-none text-sm py-3 pl-12 text-gray-500 bg-[#0F0F0F] rounded-[10px]"
+                        className=" w-5/6 mx-4 outline-none border-none text-sm py-3 pl-12 text-white/40 bg-[#000]/40 rounded-[10px]"
                     />
-                    <BsSearch className="absolute text-gray-500 left-8 top-[12px] text-md" />
+                    <BsSearch className="absolute text-white/40 left-8 top-[12px] text-md" />
                 </div>
 
-                <span className="flex text-gray-500 gap-2 mt-4 mb-2 items-center mx-4">
+                <span className="flex text-white/20 gap-2 py-3 mb-2 items-center mx-4">
                     <span>
                         <MdLocationOn className="text-xl" />
                     </span>
                     <span className="text-sm">Pinned</span>
                 </span>
-                <div className="mx-4 flex flex-col overflow-y-scroll h-64 tracking-tighter">
-                    <div className="flex gap-2 items-center p-3 rounded-xl bg-[#1B1B1B] cursor-pointer">
-                        <div className=" rounded-full">
+                <div className="mx-4 flex flex-col overflow-y-scroll h-64 barLeft">
+                    <div className="flex gap-3 items-center p-3 rounded-xl bg-[#1B1B1B] cursor-pointer mr-2">
+                        <div className=" rounded-full w-10 h-10">
                             <img
-                                src="./me.jpg"
+                                src="./me.png"
                                 alt="profile"
                                 className="w-10 h-10 rounded-full"
                             />
                         </div>
                         <div>
-                            <div className="flex justify-between items-center  gap-16">
-                                <span className="text-white text-[16px]">
-                                    Sushil Rawat
-                                </span>
-                                <span className="text-gray-500 text-[12px]">
-                                    21:10
+                            <div className="flex justify-between items-center ">
+                                <span className="text-white text-base  font-bold">
+                                    Peter White
                                 </span>
                             </div>
                             <p className="text-purple-400 text-sm">Typing...</p>
@@ -76,40 +137,43 @@ const SideChat = () => {
                     {peoples.map((people, key) => {
                         return (
                             <div
-                                className="flex gap-2 items-center p-2 rounded-xl cursor-pointer"
+                                className="flex gap-2 items-center mt-3 rounded-xl cursor-pointer justify-center"
                                 key={key}
                             >
-                                <div className=" rounded-full">
+                                <div className=" rounded-full w-10 h-10">
                                     <img
-                                        src="./me.jpg"
+                                        src="./other.png"
                                         alt="profile"
                                         className="w-10 h-10 rounded-full object-fit"
                                     />
                                 </div>
-                                <div>
-                                    <div className="flex justify-between items-center gap-16">
-                                        <span className="text-white text-[16px]">
+                                <div className="flex-1 overflow-hidden">
+                                    <div className="flex justify-between items-center gap-2 ">
+                                        <span className="flex-1 text-white text-sm font-medium">
                                             {people.name}
                                         </span>
-                                        <span className="text-gray-500 text-[12px]">
+                                        <span className="text-white/30 text-sm px-1">
                                             {people.time}
                                         </span>
                                     </div>
-                                    <span className="text-sm text-gray-500 text-ellipsis ">
-                                        Lorem ipsum dolor dfsdf ...
-                                    </span>
+                                    <div className="whitespace-nowrap text-ellipsis  overflow-hidden">
+                                        <p className="text-sm text-white/30 w-44 mr-10 whitespace-nowrap text-ellipsis inline-block overflow-hidden">
+                                            Lorem ipsum dolor dfsdsdss sd
+                                            sdeeeeee sd
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
-                <span className="flex text-gray-500 gap-2 mt-4 mb-2 items-center mx-4 ">
+                <div className="flex text-white/30 gap-2 items-center mx-4    my-4">
                     <span>
                         <FaTelegramPlane className="text-xl" />
                     </span>
-                    <span className="text-sm">All Chats</span>
-                </span>
-                <div className="mx-4 flex flex-col overflow-y-scroll h-64 tracking-tighter flex-1">
+                    <span className="text-sm font-medium">All Chats</span>
+                </div>
+                <div className="mx-4 flex flex-col overflow-y-scroll h-60 flex-1 allChat barLeft">
                     {peoples.map((people, key) => {
                         return (
                             <div
@@ -118,21 +182,21 @@ const SideChat = () => {
                             >
                                 <div className=" rounded-full">
                                     <img
-                                        src="./me.jpg"
+                                        src="./other.png"
                                         alt="profile"
                                         className="w-10 h-10 rounded-full object-fit"
                                     />
                                 </div>
-                                <div>
-                                    <div className="flex justify-between items-center gap-16">
-                                        <span className="text-white text-[16px]">
+                                <div className="flex-1">
+                                    <div className="flex justify-between items-center gap-2">
+                                        <span className=" text-white text-sm font-medium flex-1">
                                             {people.name}
                                         </span>
-                                        <span className="text-gray-500 text-[12px]">
+                                        <span className="text-white/30 text-sm">
                                             {people.time}
                                         </span>
                                     </div>
-                                    <span className="text-sm text-gray-500">
+                                    <span className="text-sm text-white/30">
                                         Lorem ipsum dolor sit .
                                     </span>
                                 </div>
